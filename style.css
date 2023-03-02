@@ -1,0 +1,959 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rock Salt', cursive;
+    font-family: 'Shantell Sans', cursive;
+}
+
+body {
+    scroll-behavior: smooth !important;
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------------- */
+
+/* Speakers - Cool */
+
+.speakers {
+    padding: 2% 10%;
+    text-align: left;
+    /* background-color: antiquewhite; */
+}
+
+.speakers .card-title {
+    font-size: 25px;
+    margin: 5% 0 !important;
+}
+
+
+
+.speakers-1 i {
+    font-size: 40px;
+    padding: 1% 5%;
+    color: red;
+
+}
+
+.speakers-1 .card {
+    border: 1px solid gainsboro !important;
+    line-height: 2;
+    margin: 0 2%;
+    padding: 1%;
+    background: linear-gradient(white, white 50%, red 50%, red);
+    background-size: 100% 250%;
+    /*trasition effect for background*/
+    transition: background .5s;
+}
+
+.speakers-1 .card:hover {
+    color: white !important;
+    background-position: 100% 100%;
+    font-weight: 500;
+}
+
+.speakers-1 .card:hover>i {
+    color: #fff !important;
+}
+
+@media (width <=500px) {
+    .speakers {
+        padding: 1% 2%;
+        margin: 1% !important;
+    }
+
+    .speakers .card {
+        margin: 2% 0;
+    }
+}
+
+
+.speakers-headers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    padding: 1% 15%;
+    margin-top: 5rem;
+    text-transform: uppercase;
+}
+
+.speakers-headers i {
+    font-size: 20px;
+}
+
+
+@media (width <=500px) {
+    .speakers-headers {
+        display: block !important;
+        font-size: 20px;
+        padding: 5%;
+        margin: 0;
+    }
+
+    .speakers-headers i {
+        font-size: 10px;
+    }
+}
+
+
+/* -------------------------------------------- */
+.logo img {
+    max-height: 4rem;
+}
+
+
+nav {
+    min-height: 6rem;
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0 5rem;
+    text-align: center;
+    align-items: center;
+    /* position: fixed; */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+.navbar {
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+nav {
+    /* background-color: red !important; */
+}
+
+
+.nav-menu li {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    font-weight: 600;
+
+}
+
+a.nav-link:hover {
+    color: black;
+    /* background-color: orange; */
+    border: 1px solid white;
+    transition-duration: .3s;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar,
+.fa-times {
+    width: 1.5rem;
+    height: 3px;
+    display: block;
+    color: #fff;
+    padding: 0;
+    margin: 6px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background-color: #fff;
+}
+
+.bar:nth-child(1) {
+    width: 100%;
+}
+
+.bar:nth-child(2) {
+    width: 200%;
+}
+
+.bar:nth-child(3) {
+    width: 300%;
+}
+
+/* -------------------- */
+/* Navbar Dropdown  */
+
+.dropbtn {
+    background-color : transparent;
+    color: white;
+    padding:  1rem;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: red;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* -------------------- */
+
+
+
+@media (max-width: 1200px) {
+    .hamburger {
+        display: block;
+    }
+
+    .active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(-315deg);
+        transform: translateY(8px) rotate(-315deg);
+        width: 300%;
+    }
+
+    .active .bar:nth-child(3) {
+        -webkit-transform: translateY(-10px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
+        width: 300%;
+    }
+
+    .nav-menu {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: start;
+        align-items: center;
+        position: fixed;
+        top: 75px;
+        right: -100%;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        margin: 0 auto;
+        background-color: #333;
+        color: white;
+    }
+
+    .nav-menu li {
+        padding: 1rem 0;
+    }
+
+    a.nav-link {
+        margin: 1rem 0;
+        color: white;
+        z-index: 1;
+    }
+
+    .active {
+        right: 0;
+        z-index: 100;
+        transition: 0.1s ease;
+    }
+
+    .logo img {
+        max-height: 3rem;
+        margin-left: -4rem;
+    }
+
+    nav {
+        background-color: red !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    a.nav-link {
+        padding: 2% 0;
+    }
+
+    #navbar_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* ------------------------------------------ */
+
+/* About section */
+
+.about-1 {
+    display: block;
+    padding: 2% 25%;
+    text-align: center;
+    line-height: 2;
+}
+
+.about-1 h2 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.about-1 p {
+    font-size: 20px;
+}
+
+.about-1 .coloring {
+    color: red;
+}
+
+@media (width <=500px) {
+    .about-1 {
+        padding: 5%;
+        text-align: justify;
+    }
+
+    .about-1 h2 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+
+/* --------------------------------------- */
+/* Banner Section */
+
+.banner {
+    min-height: 90vh;
+    background: url(./Assets/img/banner.jpg);
+    margin-top: -6rem;
+}
+
+.banner h1 {
+    font-size: 50px;
+    display: flex;
+    left: 30%;
+    top: 50%;
+    position: absolute;
+}
+
+@media (width <=500px) {
+    .banner h1 {
+        font-size: 35px;
+        left: 10%;
+    }
+}
+
+
+
+
+/* -------------------------------------------- */
+/* Top Button */
+
+#myBtn {
+    /* display: none; */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #FFC000;
+    /* color: white; */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition-duration: 1s;
+    /* animation: too 2s linear infinite; ; */
+}
+
+#myBtn img {
+    transform: rotate(-90deg);
+}
+
+@keyframes too {
+    0% {
+        transform: translateY(-30px);
+    }
+
+    25% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    75% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(-30px);
+    }
+}
+
+
+/* -------------------------------------------- */
+
+/* image hovering */
+
+.images-hovering {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+}
+
+.image-hovering-1 {
+    display: block;
+    padding: 1% 3%;
+}
+
+.image-hovering-1-1 {
+    /* border: 1px solid orange; */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+}
+
+.image-hovering-1-1 img {
+    max-width: 100%;
+}
+
+.image-hovering-1-1>p {
+    position: absolute;
+    top: 0;
+    background-color: red;
+    color: white;
+    font-weight: 800;
+    padding: 1rem;
+}
+
+.image-hovering-1-1 img:hover {
+    transform: scale(1.4);
+    transition-duration: 1s;
+}
+
+.image-hovering-1-2 h2:hover {
+    color: red;
+}
+
+@media (width <=500px) {
+    .images-hovering {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2%;
+    }
+}
+
+/* ----------------------- */
+
+.demo-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    overflow: hidden;
+    text-align: center;
+    z-index: 10000;
+}
+
+.demo-fixed div:first-child {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    max-width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+.demo-fixed img {
+    max-width: 3rem;
+    min-width: 3rem;
+    padding: .5rem;
+    background-color: red;
+}
+
+.triangle,
+.triangle img {
+    background-color: transparent !important;
+}
+
+.triangle {
+    margin-top: -2.5rem;
+}
+
+
+@media (width <=900px) {
+    .demo-fixed {
+        display: none;
+    }
+}
+
+/* ---------------------------------------- */
+
+/* Hover text show */
+
+.container-hovering-box {
+    display: flex;
+    padding: 0;
+    margin: 5%;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-hovering {
+    margin: 0 1%;
+}
+
+.content {
+    position: relative !important;
+    max-width: 100%;
+    min-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.content-image {
+    max-width: 100%;
+    min-height: 40rem;
+    background-size: contain;
+}
+
+
+.content .content-overlay {
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    max-height: 100%;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content:hover>.hover-heading {
+    display: none;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    /* border: 1px solid orange; */
+
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+    /* border: 1px solid orange; */
+
+}
+
+.fadeIn-bottom {
+    top: 80%;
+}
+
+.hover-heading {
+    position: absolute;
+    top: 50%;
+    /* background-color: gainsboro; */
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    right: 35%;
+}
+
+
+@media (width<=500px){
+    .container-hovering-box {
+        display: block;
+        padding: 0;
+        margin: 5%;
+      
+    }
+    .container-hovering {
+        margin:  2%;
+    }
+
+    .hover-heading{
+        right: 25%;
+    }
+}
+
+/* ----------------------------------------- */
+
+
+/* Search icon expand */
+
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search .input {
+    background-color: rgba(0, 0, 0, .7);
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+    color: white;
+}
+
+.search .btn {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.search .btn:focus,
+.search .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translate(198px);
+}
+
+
+@media (width <=500px) {
+    .search.active .input {
+        width: 50px;
+    }
+
+    .search.active .btn {
+        transform: translateX(48px);
+    }
+
+    .search {
+        margin-left: -6rem;
+    }
+
+}
+
+
+/* ------------------------------------------ */
+
+/* Preloader */
+
+.loader_bg {
+    position: fixed !important;
+    z-index: 999999 !important;
+    background: white;
+    min-width: 100% !important;
+    min-height: 120vh !important;
+    margin-top: -10rem;
+}
+.loader {
+    border: 0 soild transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* animation-name: hellos !important; */
+
+}
+
+.loader img {
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+}
+
+@media screen and (max-width:500px) {
+    .loader {
+        border: 0 soild transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+    }
+}
+
+/* ------------------------------------ */
+
+/* Filtering  Checklist*/
+
+.filterings{
+    padding: 2% 15%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFC000;
+}
+
+.checklist-head{
+    margin: 2%;
+}
+
+.checkbox-dropdown {
+    min-width: 100%;
+    max-width: 100%;
+    border: 1px solid #aaa;
+    padding: 1rem;
+    position: relative;
+    user-select: none;
+}
+
+
+/* Display CSS arrow to the right of the dropdown text */
+.checkbox-dropdown:after {
+    content:'';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: #000;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+}
+
+/* Reverse the CSS arrow when the dropdown is active */
+.checkbox-dropdown.is-active:after {
+    border-bottom-color: #000;
+    border-top-color: #fff;
+    margin-top: -9px;
+}
+
+.checkbox-dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -1px; /* align the dropdown to the left */
+    right: -1px; /* align the dropdown to the right */
+    opacity: 0; /* hide the dropdown */
+   background-color: lightcoral;
+    transition: opacity 0.4s ease-in-out;
+    max-height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events: none; /* avoid mouse click events inside the dropdown */
+}
+.is-active .checkbox-dropdown-list {
+    opacity: 1; /* display the dropdown */
+    z-index: 100000;
+    pointer-events: auto; /* make sure that the user still can select checkboxes */
+}
+
+.checkbox-dropdown-list li label {
+    display: block;
+    border-bottom: 1px solid silver;
+    padding: 1rem;
+    transition: all 0.2s ease-out;
+}
+
+.checkbox-dropdown-list li label:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+
+/* ----------------------------------------------------- */
+
+.foot{
+    background-color: black;
+    color: white;
+    min-height: 35rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 5% 8%;
+}
+
+.foot-1{
+    display: block;
+}
+
+.foot-1-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 10%;
+    margin-top: 5rem;
+}
+
+.foot-1-2 i{
+    background-color: red;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.foot-1-1{
+    display: flex;
+    /* background-color: #FFC000; */
+    align-items: center;
+    justify-content: end !important;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+.foot-1 h3{
+    font-size: 30px;
+
+}
+.foot-1 img {
+    max-height: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+.foot-1 , .foot2 , .foot3, .foot4, .foot5{
+    margin: 1rem ;
+    border-left: 0.5rem solid white;
+    padding-left: 1rem;
+}
+
+
+.foot3 , .foot4 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.foot3 div:hover , .foot4 div:hover{
+    color: red;
+}
+
+.foot5{
+    display: block;
+    font-size: 30px;
+}
+
+.foot5 img {
+    min-height: 3rem;
+    background-color: red;
+    padding: 1rem;
+}
+
+.foot2 p{
+    text-align: justify;
+    padding: .5rem 5rem 0 0;
+}
+
+@media (width <=1800px){
+    .foot-1 img{
+        max-height: 4rem !important;
+        margin-right: -2rem;
+    }
+
+    .foot-1-1{
+        display: block;
+    }
+}
+
+@media (width <=1000px){
+    .foot{
+        display: block;
+    }
+
+    .foot-1-1{
+        display: block;
+        text-align: left;
+        padding: 0;
+    }
+
+    .foot-1-2{
+        padding: 1% ;
+        margin-top: 1rem;
+    }
+
+    .foot-1 img{
+        margin-left: -2rem;
+        margin-right: 0;
+    }
+}
